@@ -1,5 +1,5 @@
 ﻿namespace DRAGONGAME_GAME_START_INTERFACE
-{
+{//m
     partial class Form1
     {
         /// <summary>
