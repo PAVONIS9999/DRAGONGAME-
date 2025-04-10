@@ -26,5 +26,10 @@ namespace DRAGONGAME_GAME_START_INTERFACE
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

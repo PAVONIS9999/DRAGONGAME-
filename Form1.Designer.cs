@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label2 = new Label();
             label3 = new Label();
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             groupBox1 = new GroupBox();
+            label26 = new Label();
             button3 = new Button();
             groupBox2 = new GroupBox();
             radioButton4 = new RadioButton();
@@ -72,11 +74,19 @@
             label23 = new Label();
             label24 = new Label();
             label25 = new Label();
-            label26 = new Label();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            pictureBox3 = new PictureBox();
+            pictureBox4 = new PictureBox();
+            label27 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
             groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             SuspendLayout();
             // 
             // label2
@@ -107,6 +117,7 @@
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(245, 31);
             textBox1.TabIndex = 3;
+            textBox1.TextChanged += textBox1_TextChanged;
             // 
             // textBox2
             // 
@@ -119,6 +130,7 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(label27);
             groupBox1.Controls.Add(label26);
             groupBox1.Controls.Add(button3);
             groupBox1.Controls.Add(groupBox2);
@@ -135,6 +147,15 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Player 1";
             // 
+            // label26
+            // 
+            label26.AutoSize = true;
+            label26.Location = new Point(11, 70);
+            label26.Name = "label26";
+            label26.Size = new Size(17, 25);
+            label26.TabIndex = 7;
+            label26.Text = " ";
+            // 
             // button3
             // 
             button3.BackColor = Color.Silver;
@@ -147,6 +168,7 @@
             button3.TabIndex = 6;
             button3.Text = "Save";
             button3.UseVisualStyleBackColor = false;
+            button3.Click += button3_Click;
             // 
             // groupBox2
             // 
@@ -174,6 +196,7 @@
             radioButton4.TabStop = true;
             radioButton4.Text = "Earth Dragon";
             radioButton4.UseVisualStyleBackColor = true;
+            radioButton4.CheckedChanged += radioButton4_CheckedChanged;
             // 
             // radioButton3
             // 
@@ -355,7 +378,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(1409, 72);
+            label5.Location = new Point(1721, 72);
             label5.Margin = new Padding(4, 0, 4, 0);
             label5.Name = "label5";
             label5.Size = new Size(124, 25);
@@ -365,7 +388,7 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(1409, 97);
+            label6.Location = new Point(1730, 97);
             label6.Margin = new Padding(4, 0, 4, 0);
             label6.Name = "label6";
             label6.Size = new Size(99, 25);
@@ -375,7 +398,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new Point(1409, 123);
+            label7.Location = new Point(1730, 126);
             label7.Margin = new Padding(4, 0, 4, 0);
             label7.Name = "label7";
             label7.Size = new Size(60, 25);
@@ -385,7 +408,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(1409, 148);
+            label8.Location = new Point(1723, 186);
             label8.Margin = new Padding(4, 0, 4, 0);
             label8.Name = "label8";
             label8.Size = new Size(149, 25);
@@ -395,7 +418,8 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(1409, 173);
+            label9.BackColor = Color.Transparent;
+            label9.Location = new Point(1701, 151);
             label9.Margin = new Padding(4, 0, 4, 0);
             label9.Name = "label9";
             label9.Size = new Size(209, 25);
@@ -405,7 +429,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(1409, 198);
+            label10.Location = new Point(1701, 224);
             label10.Margin = new Padding(4, 0, 4, 0);
             label10.Name = "label10";
             label10.Size = new Size(141, 25);
@@ -415,7 +439,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new Point(1413, 265);
+            label11.Location = new Point(1724, 290);
             label11.Margin = new Padding(4, 0, 4, 0);
             label11.Name = "label11";
             label11.Size = new Size(105, 25);
@@ -425,7 +449,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(1413, 290);
+            label12.Location = new Point(1730, 330);
             label12.Margin = new Padding(4, 0, 4, 0);
             label12.Name = "label12";
             label12.Size = new Size(60, 25);
@@ -435,7 +459,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(1413, 315);
+            label13.Location = new Point(1711, 365);
             label13.Margin = new Padding(4, 0, 4, 0);
             label13.Name = "label13";
             label13.Size = new Size(149, 25);
@@ -445,7 +469,7 @@
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(1413, 340);
+            label14.Location = new Point(1691, 390);
             label14.Margin = new Padding(4, 0, 4, 0);
             label14.Name = "label14";
             label14.Size = new Size(219, 25);
@@ -455,7 +479,7 @@
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(1413, 365);
+            label15.Location = new Point(1704, 423);
             label15.Margin = new Padding(4, 0, 4, 0);
             label15.Name = "label15";
             label15.Size = new Size(141, 25);
@@ -465,7 +489,7 @@
             // label16
             // 
             label16.AutoSize = true;
-            label16.Location = new Point(1413, 423);
+            label16.Location = new Point(1712, 473);
             label16.Margin = new Padding(4, 0, 4, 0);
             label16.Name = "label16";
             label16.Size = new Size(117, 25);
@@ -475,7 +499,7 @@
             // label17
             // 
             label17.AutoSize = true;
-            label17.Location = new Point(1413, 448);
+            label17.Location = new Point(1724, 498);
             label17.Margin = new Padding(4, 0, 4, 0);
             label17.Name = "label17";
             label17.Size = new Size(60, 25);
@@ -485,7 +509,7 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(1413, 473);
+            label18.Location = new Point(1712, 523);
             label18.Margin = new Padding(4, 0, 4, 0);
             label18.Name = "label18";
             label18.Size = new Size(149, 25);
@@ -495,7 +519,7 @@
             // label19
             // 
             label19.AutoSize = true;
-            label19.Location = new Point(1413, 498);
+            label19.Location = new Point(1711, 548);
             label19.Margin = new Padding(4, 0, 4, 0);
             label19.Name = "label19";
             label19.Size = new Size(209, 25);
@@ -505,7 +529,7 @@
             // label20
             // 
             label20.AutoSize = true;
-            label20.Location = new Point(1413, 523);
+            label20.Location = new Point(1719, 587);
             label20.Margin = new Padding(4, 0, 4, 0);
             label20.Name = "label20";
             label20.Size = new Size(141, 25);
@@ -515,7 +539,7 @@
             // label21
             // 
             label21.AutoSize = true;
-            label21.Location = new Point(1413, 587);
+            label21.Location = new Point(1710, 644);
             label21.Margin = new Padding(4, 0, 4, 0);
             label21.Name = "label21";
             label21.Size = new Size(119, 25);
@@ -525,7 +549,7 @@
             // label22
             // 
             label22.AutoSize = true;
-            label22.Location = new Point(1413, 612);
+            label22.Location = new Point(1723, 687);
             label22.Margin = new Padding(4, 0, 4, 0);
             label22.Name = "label22";
             label22.Size = new Size(60, 25);
@@ -535,7 +559,7 @@
             // label23
             // 
             label23.AutoSize = true;
-            label23.Location = new Point(1413, 637);
+            label23.Location = new Point(1711, 716);
             label23.Margin = new Padding(4, 0, 4, 0);
             label23.Name = "label23";
             label23.Size = new Size(149, 25);
@@ -545,7 +569,7 @@
             // label24
             // 
             label24.AutoSize = true;
-            label24.Location = new Point(1413, 662);
+            label24.Location = new Point(1711, 750);
             label24.Margin = new Padding(4, 0, 4, 0);
             label24.Name = "label24";
             label24.Size = new Size(209, 25);
@@ -555,28 +579,74 @@
             // label25
             // 
             label25.AutoSize = true;
-            label25.Location = new Point(1413, 687);
+            label25.Location = new Point(1721, 793);
             label25.Margin = new Padding(4, 0, 4, 0);
             label25.Name = "label25";
             label25.Size = new Size(141, 25);
             label25.TabIndex = 28;
             label25.Text = "5 Block Damage";
+            label25.Click += label25_Click;
             // 
-            // label26
+            // pictureBox1
             // 
-            label26.AutoSize = true;
-            label26.Location = new Point(11, 70);
-            label26.Name = "label26";
-            label26.Size = new Size(120, 25);
-            label26.TabIndex = 7;
-            label26.Text = "Player Name :";
+            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
+            pictureBox1.Location = new Point(1387, 72);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(224, 169);
+            pictureBox1.TabIndex = 29;
+            pictureBox1.TabStop = false;
+            pictureBox1.Click += pictureBox1_Click;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
+            pictureBox2.Location = new Point(1387, 290);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(224, 169);
+            pictureBox2.TabIndex = 30;
+            pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
+            pictureBox3.Location = new Point(1387, 473);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(224, 169);
+            pictureBox3.TabIndex = 31;
+            pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            pictureBox4.BackColor = Color.IndianRed;
+            pictureBox4.BorderStyle = BorderStyle.Fixed3D;
+            pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
+            pictureBox4.Location = new Point(1387, 663);
+            pictureBox4.Name = "pictureBox4";
+            pictureBox4.Size = new Size(231, 169);
+            pictureBox4.TabIndex = 32;
+            pictureBox4.TabStop = false;
+            // 
+            // label27
+            // 
+            label27.AutoSize = true;
+            label27.Location = new Point(11, 70);
+            label27.Name = "label27";
+            label27.Size = new Size(115, 25);
+            label27.TabIndex = 8;
+            label27.Text = "Player Name:";
+            label27.Click += label27_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = SystemColors.Control;
-            ClientSize = new Size(1634, 767);
+            BackColor = Color.Orange;
+            BackgroundImageLayout = ImageLayout.Stretch;
+            ClientSize = new Size(1967, 948);
+            Controls.Add(pictureBox4);
+            Controls.Add(pictureBox3);
+            Controls.Add(pictureBox2);
+            Controls.Add(pictureBox1);
             Controls.Add(label25);
             Controls.Add(label24);
             Controls.Add(label23);
@@ -603,7 +673,8 @@
             Controls.Add(groupBox1);
             Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
-            Text = "GAME START INTERFACE";
+            Text = " ";
+            Load += Form1_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             groupBox2.ResumeLayout(false);
@@ -612,6 +683,10 @@
             groupBox3.PerformLayout();
             groupBox4.ResumeLayout(false);
             groupBox4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -662,5 +737,10 @@
         private RadioButton radioButton6;
         private RadioButton radioButton5;
         private Label label26;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
+        private PictureBox pictureBox3;
+        private PictureBox pictureBox4;
+        private Label label27;
     }
 }
